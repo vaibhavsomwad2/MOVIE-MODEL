@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE MODEL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="header bg-primary p-4 text-white">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Movie Gallery</h2>
+            </div>
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-success" id="showModel">add movie</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row" id="movieContainer">
+               
+                <!-- <div class="col-sm-4">
+                    <div class="card moviecard" >
+                        <div class="card-body">
+                            <figure>
+                                <img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0aHnrIZef8hLSM0J0oDYywAvuofUIqI9CXg&usqp=CAU" alt="">
+                                <figcaption>
+                                    <h3 class="title">Andhdhund</h3>
+                                    <p class="rating">5/5</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <div id="backDrop"></div>
+    <div class="mymodel" id="mymodel">
+        <div class="MHeader p-3 bg-success text-white">
+            <h3>
+                Add Movie Details
+                <i class="fas fa-times hideModel"></i>
+            </h3>
+        </div>
+        <div class="mBody p-3">
+            <form id="movieForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Url">Image Url</label>
+                    <input type="text" id="Url" class="form-control" required>
+                </div>
+
+                 <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="text" id="rating" class="form-control" required>
+                </div>
+
+        </div>
+        <div class="mFooter p-3 text-right">
+            <input class="btn btn-success" id="Addmovie" value="Add Movie" type="submit">
+            <button class="btn btn-success d-none" id="UpdateBtn" type="button">UpdateBtn</button>
+            <button class="btn btn-danger hideModel">CANCLE</button>
+        </div>
+        </form>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "Movie": [
+    {
+      "titleName": "brahmastra ",
+      "imgUrl": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202209/1022590-alia-bhatt-ranbir-kapo_1200x768.jpeg?kSc4cTwhLpoiLwr0.LfFlFhZP7TtelQt&size=770:433",
+      "ratingValue": "4",
+      "id": 1
+    },
+    {
+      "titleName": "pushpa",
+      "imgUrl": "https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/pushpa_box_office_monday.jpg",
+      "ratingValue": "3",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
