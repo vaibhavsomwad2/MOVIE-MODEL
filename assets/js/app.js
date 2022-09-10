@@ -18,13 +18,14 @@ let baseUrl = ` http://localhost:3000`;
 
 
 let tokenValue = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+
 localStorage.setItem("token",tokenValue)
 const MakeAPICall = (methodName,Url,body) =>{
     return new Promise((resolve,reject)=>{
         let xhr = new XMLHttpRequest();
         xhr.open(methodName,Url);
         xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
-        xhr.setRequestHeader("aut","token")
+        xhr.setRequestHeader("aut",localStorage.getItem("token"))
         xhr.onload = function (){
           if((xhr.status === 200 || xhr.status === 201) && xhr.readyState === 4){
             resolve(xhr.response)
@@ -48,45 +49,6 @@ const handelBackDropModel = () =>{
 const showModelclick = (e) =>{
     handelBackDropModel();
 }
-
-
-
-
-
-
-
-
-// const AddmovieHandler = (e) =>{
-//     e.preventDefault();
-//     let obj ={
-//         titleName :title.value,
-//         imgUrl : Url.value,
-//         ratingValue :rating.value,
-//     }
-//     movieArray.push(obj)
-//     movieForm.reset();
-//     handelBackDropModel();
-
-
-//     let result ='';
-//     movieArray.forEach(movie =>{
-//         result +=`<div class="col-md-4 mt-4">
-//         <div class="card moviecard">
-//             <div class="card-body">
-//                 <figure>
-//                     <img class="img-responsive" src="${movie.imgUrl}" alt="" >
-//                     <figcaption>
-//                         <h3 class="title">${movie.titleName}</h3>
-//                         <p class="rating">${movie.ratingValue}/5</p>
-//                     </figcaption>
-//                 </figure>
-//             </div>
-//         </div>
-//     </div>`
-//     })
-//     movieContainer.innerHTML = result;
-// }
-
 const AddmovieHandler = (eve) =>{
     eve.preventDefault();
     let Obj = {
